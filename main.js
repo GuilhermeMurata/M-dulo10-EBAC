@@ -45,8 +45,9 @@ $(document).ready(function(){
         messages: {
             nome: 'Por favor, insira o seu nome completo'
         },
-        submitHandler: function(form) {
-            console.log(form)
+        submitHandler: function(form, event) {
+            event.preventDefault();
+            console.log(form);
         },
         invalidHandler: function(evento, validador) {
             let camposIncorretos = validador.numberOfinvalids();
